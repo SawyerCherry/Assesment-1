@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var topLabel: UILabel!
+    
+    @IBOutlet weak var bottomButton: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
-
-
+    var textInput = ""
+    @IBAction func buttonTapped(_ sender: Any) {
+    textInput = textField.text!
+    topLabel.text = textInput
+    textField.text = ""
+    }
 }
 
